@@ -31,23 +31,21 @@ console.log(`README.md is ${fileBytes.sync('README.md')} bytes`);
 //=> 'README.md is 1806 bytes'
 ```
 
+<br>
+
 ## API
 
 ### fileBytes(filename)
 
-Returns a promise for the filename's file size.
+Returns a promise for the filename's file size as a `number`.
 
 ### fileBytes.sync(filename)
 
-Return's the filename's file size.
+Return's the filename's file size as a `number`.
 
 #### filename
 
 Type: `string`
-
-#### returns
-
-Type: `number`
 
 <br>
 
