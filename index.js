@@ -2,13 +2,13 @@
 const fs = require('fs');
 const pathExists = require('path-exists');
 
-module.exports = filename => new Promise(resolve => {
+module.exports = filename => new Promise((resolve, reject) => {
   if (pathExists.sync(filename)) {
     const stats = fs.statSync(filename);
     resolve(stats.size);
   }
 
-  throw new Error(`File "${filename}" not found`);
+  reject(new Error(`File "${filename}" not found`));
 });
 
 module.exports.sync = filename => {

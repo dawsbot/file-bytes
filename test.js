@@ -23,9 +23,12 @@ test('small file sync', t => {
 });
 
 test('invalid args promise', async t => {
-  t.throws(() => {
-    fileBytes.sync('invalidFileName.txt');
-  }, Error);
+  try {
+    await fileBytes('invalidFileName.txt');
+    t.fail('Exception was not thrown');
+  } catch (err) {
+    t.truthy(err);
+  }
 });
 
 test('empty file promise', async t => {
