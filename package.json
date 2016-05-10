@@ -1,0 +1,48 @@
+{
+  "name": "file-bytes",
+  "version": "0.0.0",
+  "description": "Get the file size of a file",
+  "license": "MIT",
+  "homepage": "https://github.com/dawsonbotsford/file-bytes#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dawsonbotsford/file-bytes.git"
+  },
+  "author": {
+    "name": "Dawson Botsford",
+    "email": "DawsonBotsford@gmail.com",
+    "url": "dawsonbotsford.com"
+  },
+  "bugs": {
+    "url": "https://github.com/dawsonbotsford/file-bytes/issues"
+  },
+  "engines": {
+    "node": ">=0.12.0"
+  },
+  "scripts": {
+    "test": "xo && ava"
+  },
+  "files": [
+    "index.js"
+  ],
+  "keywords": [
+    "lean",
+    "minimal",
+    "documented",
+    "tested",
+    "licensed",
+    "ava",
+    "dawson"
+  ],
+  "dependencies": {
+    "path-exists": "^3.0.0",
+    "shelljs": "^0.7.0"
+  },
+  "devDependencies": {
+    "ava": "^0.14.0",
+    "xo": "^0.14.0"
+  },
+  "xo": {
+    "space": true
+  }
+}
