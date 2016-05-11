@@ -1,6 +1,6 @@
 {
   "name": "file-bytes",
-  "version": "1.1.1",
+  "version": "2.0.0",
   "description": "Get the file size of a file",
   "license": "MIT",
   "homepage": "https://github.com/dawsonbotsford/file-bytes#readme",
@@ -26,6 +26,9 @@
     "index.js"
   ],
   "keywords": [
+    "file",
+    "size",
+    "bytes",
     "lean",
     "minimal",
     "documented",
@@ -35,10 +38,10 @@
     "dawson"
   ],
   "dependencies": {
-    "path-exists": "^3.0.0",
-    "shelljs": "^0.7.0"
+    "pify": "^2.3.0"
   },
   "devDependencies": {
+    "shelljs": "^0.7.0",
     "ava": "^0.14.0",
     "xo": "^0.14.0"
   },
