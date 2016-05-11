@@ -23,12 +23,12 @@ const fileBytes = require('file-bytes');
 fileBytes('README.md').then(size => {
   console.log(`README.md is ${size} bytes`);
 });
-//=> 'README.md is 1806 bytes'
+//=> "README.md" is 1806 bytes
 
 
 // sync
 console.log(`README.md is ${fileBytes.sync('README.md')} bytes`);
-//=> 'README.md is 1806 bytes'
+//=> "README.md" is 1806 bytes
 ```
 
 <br>
@@ -46,6 +46,39 @@ Return's the filename's file size as a `number`.
 #### filename
 
 Type: `string`
+
+<br>
+
+## Examples
+
+* Convert the output into human style using [pretty-bytes](https://github.com/sindresorhus/pretty-bytes)
+
+```js
+const fileBytes = require('file-bytes');
+const prettyBytes = require('pretty-bytes');
+
+console.log(prettyBytes(fileBytes.sync('example.txt')));
+//=> 1.34 kB
+```
+
+<br>
+
+* Get the file sizes of everything in the current repo with [glob](https://github.com/isaacs/node-glob)
+
+```js
+const fileBytes = require('file-bytes');
+const glob = require('glob');
+
+glob('./*', (err, files) => {
+  // files is an array of filenames.
+  for(let file of files) {
+    console.log(`"${file}" is ${size} bytes`);
+  }
+});
+//=> "README.md" is 1806 bytes
+//=> "package.json" is 122 bytes
+//=> "index.js" is 497 bytes
+```
 
 <br>
 
