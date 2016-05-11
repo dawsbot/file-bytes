@@ -1,6 +1,7 @@
 # file-bytes
 [![npm version](https://img.shields.io/npm/v/file-bytes.svg)](https://www.npmjs.com/package/file-bytes)
 [![Build Status](https://travis-ci.org/dawsonbotsford/file-bytes.svg?branch=master)](https://travis-ci.org/dawsonbotsford/file-bytes)
+[![Build status](https://ci.appveyor.com/api/projects/status/7vxahu1f0s0k9isc?svg=true)](https://ci.appveyor.com/project/dawsonbotsford/file-bytes)
 [![XO code style](https://img.shields.io/badge/code_style-XO-5ed9c7.svg)](https://github.com/sindresorhus/xo)
 
 > Get the file size of a file
