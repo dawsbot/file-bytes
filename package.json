@@ -1,6 +1,6 @@
 {
   "name": "file-bytes",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Get the file size of a file",
   "license": "MIT",
   "homepage": "https://github.com/dawsonbotsford/file-bytes#readme",
