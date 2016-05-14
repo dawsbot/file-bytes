@@ -2,12 +2,7 @@ const fs = require('fs');
 const sh = require('shelljs');
 import test from 'ava';
 import fileBytes from './';
-
-function getRand() {
-  const min = 0;
-  const max = 99999999999999999999;
-  return Math.floor(Math.random() * (max - min) + min);
-}
+const tempWrite = require('temp-write');
 
 test('invalid args sync', t => {
   t.throws(() => {
@@ -16,18 +11,14 @@ test('invalid args sync', t => {
 });
 
 test('empty file sync', t => {
-  const file = `empty${getRand()}.txt`;
-  sh.touch(file);
+  const file = tempWrite.sync('');
   t.is(fileBytes.sync(file), 0);
   t.is(typeof fileBytes.sync(file), 'number');
-  sh.rm(file);
 });
 
 test('small file sync', t => {
-  const file = `small${getRand()}.txt`;
-  fs.writeFileSync(file, 'four');
+  const file = tempWrite.sync('1234');
   t.is(fileBytes.sync(file), 4);
-  sh.rm(file);
 });
 
 test('invalid args promise', t => {
@@ -35,15 +26,11 @@ test('invalid args promise', t => {
 });
 
 test('empty file promise', async t => {
-  const file = `empty${getRand()}.txt`;
-  sh.touch(file);
+  const file = tempWrite.sync('');
   t.is(await fileBytes(file), 0);
-  sh.rm(file);
 });
 
 test('small file promise', async t => {
-  const file = `small${getRand()}.txt`;
-  fs.writeFileSync(file, 'four');
+  const file = tempWrite.sync('1234');
   t.is(await fileBytes(file), 4);
-  sh.rm(file);
 });
