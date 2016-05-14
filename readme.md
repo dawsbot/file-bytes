@@ -73,7 +73,7 @@ const glob = require('glob');
 glob('./*', (err, files) => {
   // files is an array of filenames.
   for (let file of files) {
-    const size = fileBytes(file);
+    const size = fileBytes.sync(file);
     console.log(`"${file}" is ${size} bytes`);
   }
 });
