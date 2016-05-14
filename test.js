@@ -1,8 +1,6 @@
-const fs = require('fs');
-const sh = require('shelljs');
 import test from 'ava';
-import fileBytes from './';
 const tempWrite = require('temp-write');
+import fileBytes from './';
 
 test('invalid args sync', t => {
   t.throws(() => {
