@@ -1,7 +1,7 @@
 {
   "name": "file-bytes",
   "version": "2.0.3",
-  "description": "Get the file size of a file",
+  "description": "In JavaScript - Get the bytes size of a file",
   "license": "MIT",
   "homepage": "https://github.com/dawsonbotsford/file-bytes#readme",
   "repository": {
@@ -11,10 +11,10 @@
   "author": {
     "name": "Dawson Botsford",
     "email": "DawsonBotsford@gmail.com",
-    "url": "dawsonbotsford.com"
+    "url": "https://dawsbot.com"
   },
   "bugs": {
-    "url": "https://github.com/dawsonbotsford/file-bytes/issues"
+    "url": "https://github.com/dawsbot/file-bytes/issues"
   },
   "engines": {
     "node": ">=0.12.0"
